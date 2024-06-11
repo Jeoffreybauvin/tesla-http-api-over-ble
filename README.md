@@ -112,4 +112,5 @@ You can now test with a new command :
 
 - [ ] Last Python version
 - [ ] Support multiple VINs
+- [ ] Better handling of errors
 - [ ] Feel free to ask ;)
