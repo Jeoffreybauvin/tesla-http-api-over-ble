@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  tesla-http-api-over-ble:
+    image: tesla-http-api-over-ble:latest
+    container_name: 'tesla-http-api-over-ble'
+    restart: unless-stopped
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock # MANDATORY
+    environment:
+      VIN: YOUR_VIN
+      PRIVATE_KEY_FILE: THE_PATH_TO_THE_PRIVATE_KEY
+      DOCKER_IMAGE_TESLA_VEHICLE_COMMAND: tesla-vehicle-command:latest # The name of the builded tesla-vehicle-command
