@@ -3,6 +3,18 @@ Use my custom HTTP API as a proxy for making BLE request to your Tesla
 
 For now, it supports only ONE Tesla's VIN by API. 
 
+# What this repository does
+
+My goal here is to get back access to the Tesla API. And I don't want to play with the new Flee API. 
+
+So, I started using the [vehicle-command](https://github.com/teslamotors/vehicle-command) provided by Tesla and more precisely the BLE command `tesla-control`.
+
+Once the BLE access to my Tesla was ok, I developed a homemade API to launch a docker container with the `tesla-control` command.
+
+I'm providing two Docker images
+- The first is the tesla vehicle-command SDK. See below for building it.
+- The second, is a light image with Docker and my homemade API.
+
 # BLE access to your Tesla
 
 > [!IMPORTANT]
