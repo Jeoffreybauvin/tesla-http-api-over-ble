@@ -4,9 +4,6 @@ from typing import Dict
 from typing_extensions import TypedDict
 
 class Settings(BaseSettings):
-    # app_name: str = "Awesome API"
-    # admin_email: str
-    # items_per_user: int = 50
     app_name: str = "tesla-http-api-over-ble"
     version: str = "0.0.1"
     commands: Dict = {
@@ -40,7 +37,7 @@ class Settings(BaseSettings):
         'steering-wheel-heater': 'Set steering wheel mode to STATE (on or off)',
         'auto-seat-and-climate': 'Turn on automatic seat heating and HVAC',        
     }
-    docker_image_tesla_vehicle_command: str = 'test:latest'
+    docker_image_tesla_vehicle_command: str = 'jeoffrey54/tesla-http-api-over-ble:latest'
     # Tesla specific
     vin: str = "VIN"
     private_key_file: str = 'private.pem'

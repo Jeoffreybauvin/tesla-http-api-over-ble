@@ -12,8 +12,8 @@ So, I started using the [vehicle-command](https://github.com/teslamotors/vehicle
 Once the BLE access to my Tesla was ok, I developed a homemade API to launch a docker container with the `tesla-control` command.
 
 I'm providing two Docker images
-- The first is the tesla vehicle-command SDK. See below for building it.
-- The second, is a light image with Docker and my homemade API.
+- The first is the tesla vehicle-command SDK. See below for building it (part Tesla Vehicle-Command SDK), or use [my builded image on Docker Hub](https://hub.docker.com/r/jeoffrey54/tesla-vehicle-command).
+- The second, is a light image with Docker and my homemade API. See below for building it (part Build the API image), or use [my builded image on Docker Hub](https://hub.docker.com/r/jeoffrey54/tesla-http-api-over-ble)
 
 # BLE access to your Tesla
 
@@ -21,6 +21,24 @@ I'm providing two Docker images
 > BLE means Bluetooth Low Energy : you'll need access to Blueooth in order to launch all of this project.
 
 This guide is tested with a Tesla Model 3 2022.
+
+## Build and launch the API image
+
+```
+docker build -t tesla-http-api-over-ble:latest .
+```
+
+If you want to run it, let's check the docker-compose.yml file in the repo. 
+
+There are 3 useful environment variables :
+
+- `VIN`: The Tesla's VIN of your vehicle
+- `PRIVATE_KEY_FILE`: The path of your generated private key
+- `DOCKER_IMAGE_TESLA_VEHICLE_COMMAND`: The name of the builded tesla-vehicle-command. By default, it's the one from Docker Hub.
+
+> [!IMPORTANT]
+> By default, the API runs ot the port 8000. The Swagger documentation is exposed on this path : `/docs`
+
 
 ## Tesla Vehicle-Command SDK
 
@@ -89,3 +107,9 @@ You can now test with a new command :
 ```
 
 `unlock` should unlock your car ;).
+
+# Todolist
+
+- [ ] Last Python version
+- [ ] Support multiple VINs
+- [ ] Feel free to ask ;)
