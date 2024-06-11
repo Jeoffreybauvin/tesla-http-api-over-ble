@@ -15,6 +15,8 @@ I'm providing two Docker images
 - The first is the tesla vehicle-command SDK. See below for building it (part Tesla Vehicle-Command SDK), or use [my builded image on Docker Hub](https://hub.docker.com/r/jeoffrey54/tesla-vehicle-command).
 - The second, is a light image with Docker and my homemade API. See below for building it (part Build the API image), or use [my builded image on Docker Hub](https://hub.docker.com/r/jeoffrey54/tesla-http-api-over-ble)
 
+The available commands of the BLE `tesla-control` is here : https://github.com/Jeoffreybauvin/tesla-http-api-over-ble/blob/master/settings.py#L10
+
 # BLE access to your Tesla
 
 > [!IMPORTANT]
