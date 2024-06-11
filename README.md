@@ -1,26 +1,29 @@
 # tesla-http-api-over-ble
-Use my custom HTTP API as a proxy for making BLE request to your Tesla
+Use my custom HTTP API as a proxy for making BLE requests to your Tesla
 
 For now, it supports only ONE Tesla's VIN by API. 
 
 # What this repository does
 
-My goal here is to get back access to the Tesla API. And I don't want to play with the new Flee API. 
+My goal here is to get back access to the Tesla API. And I don't want to play with the new Fleet API. 
 
 So, I started using the [vehicle-command](https://github.com/teslamotors/vehicle-command) provided by Tesla and more precisely the BLE command `tesla-control`.
 
 Once the BLE access to my Tesla was ok, I developed a homemade API to launch a docker container with the `tesla-control` command.
 
-I'm providing two Docker images
+I'm providing two Docker images :
+
 - The first is the tesla vehicle-command SDK. See below for building it (part Tesla Vehicle-Command SDK), or use [my builded image on Docker Hub](https://hub.docker.com/r/jeoffrey54/tesla-vehicle-command).
 - The second, is a light image with Docker and my homemade API. See below for building it (part Build the API image), or use [my builded image on Docker Hub](https://hub.docker.com/r/jeoffrey54/tesla-http-api-over-ble)
+
+The available commands of the BLE `tesla-control` is here : https://github.com/Jeoffreybauvin/tesla-http-api-over-ble/blob/master/settings.py#L10
 
 # BLE access to your Tesla
 
 > [!IMPORTANT]
-> BLE means Bluetooth Low Energy : you'll need access to Blueooth in order to launch all of this project.
+> BLE means Bluetooth Low Energy : you'll need a Bluetooth dongle and the Tesla near it in order to use this project.
 
-This guide is tested with a Tesla Model 3 2022.
+This guide is tested with a Tesla Model 3 2022, mine ;).
 
 ## Build and launch the API image
 
