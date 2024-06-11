@@ -11,7 +11,8 @@ So, I started using the [vehicle-command](https://github.com/teslamotors/vehicle
 
 Once the BLE access to my Tesla was ok, I developed a homemade API to launch a docker container with the `tesla-control` command.
 
-I'm providing two Docker images
+I'm providing two Docker images :
+
 - The first is the tesla vehicle-command SDK. See below for building it (part Tesla Vehicle-Command SDK), or use [my builded image on Docker Hub](https://hub.docker.com/r/jeoffrey54/tesla-vehicle-command).
 - The second, is a light image with Docker and my homemade API. See below for building it (part Build the API image), or use [my builded image on Docker Hub](https://hub.docker.com/r/jeoffrey54/tesla-http-api-over-ble)
 
@@ -20,7 +21,7 @@ The available commands of the BLE `tesla-control` is here : https://github.com/J
 # BLE access to your Tesla
 
 > [!IMPORTANT]
-> BLE means Bluetooth Low Energy : you'll need a Blueooth dongle and the Tesla near it in order to use this project.
+> BLE means Bluetooth Low Energy : you'll need a Bluetooth dongle and the Tesla near it in order to use this project.
 
 This guide is tested with a Tesla Model 3 2022, mine ;).
 

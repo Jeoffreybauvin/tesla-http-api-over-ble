@@ -15,6 +15,7 @@ class Settings(BaseSettings):
         'climate-set-temp': 'Set temperature (celsius)',
         'honk': 'Honk horn',
         'ping': 'Ping vehicle',
+        'product-info': 'Print JSON product info',
         'flash-lights': 'Flash lights',
         'charging-set-limit': 'Set charge limit to PERCENT',
         'charging-set-amps': 'Set charge current to AMPS',
@@ -35,9 +36,10 @@ class Settings(BaseSettings):
         'autosecure-modelx': 'Close falcon-wing doors and lock vehicle. Model X only',
         'set-heater': 'Set seat heater at POSITION to LEVEL',
         'steering-wheel-heater': 'Set steering wheel mode to STATE (on or off)',
-        'auto-seat-and-climate': 'Turn on automatic seat heating and HVAC',        
+        'auto-seat-and-climate': 'Turn on automatic seat heating and HVAC',    
+        'wake': 'Wake up vehicle',    
     }
-    docker_image_tesla_vehicle_command: str = 'jeoffrey54/tesla-http-api-over-ble:latest'
+    docker_image_tesla_vehicle_command: str = 'jeoffrey54/tesla-vehicle-command:latest'
     # Tesla specific
     vin: str = "VIN"
     private_key_file: str = 'private.pem'
