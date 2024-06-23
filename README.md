@@ -28,7 +28,7 @@ This guide is tested with a Tesla Model 3 2022, mine ;).
 ## Build and launch the API image
 
 ```
-docker build -t tesla-http-api-over-ble:latest .
+make build
 ```
 
 If you want to run it, let's check the docker-compose.yml file in the repo. 
@@ -48,13 +48,13 @@ There are 3 useful environment variables :
 I'm providing a custom Docker image for the Tesla [vehicle-command](https://github.com/teslamotors/vehicle-command). Let's build it. Clone this repo, and launch :
 
 ```
-cd vehicle-command ; docker build -t tesla-vehicle-command:latest .
+cd vehicle-command ; make build
 ```
 
 And then, test it :
 
 ```
-docker run -ti tesla-vehicle-command:latest /usr/local/bin/app/tesla-control -h
+docker run -ti tesla-vehicle-command:latest /usr/local/bin/tesla-control -h
 ```
 
 If you're able to see the help of the tesla-control's command, let's continue.
